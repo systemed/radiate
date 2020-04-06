@@ -1,5 +1,4 @@
-Radiate
-=======
+## Radiate
 
 Radiate is a flexible heatmap engine in ActionScript 3. It supports points, polygons and polylines. Each can be applied with varying radius and strength.
 
@@ -7,15 +6,13 @@ Geometries are requested from a server using a simple API. Radius and strength i
 
 You can see a deployment of this project at www.growingroutes.org.uk.
 
-Compiling
----------
+### Compiling
 
 `mxmlc radiate.as -output=/path/to/radiate.swf`
 
 (as usual, add  `-verbose-stacktraces` for debug information)
 
-JavaScript interface
---------------------
+### JavaScript interface
 
 Call refreshLayers from JavaScript
 
@@ -26,8 +23,7 @@ with an object containing settings for each layer:
 `{ name1: { radius: 5, strength: 50, enabled: true },
    name2: { radius: 1, strength: 100, enabled: false } }`
 
-Database API
-------------
+### Database API
 
 Radiate expects to call an API located at `/api`: you can change API_URL in HeatMap.as to alter this. The API should provide two calls:
 
@@ -47,13 +43,11 @@ Returns geometries for each object.
 
 See `server/` for excerpts from a Ruby implementation of this API.
 
-Um, Flash?
------------
+### Um, Flash?
 
 At the time of initially developing this code, native browser support for filters was less than ideal. The situation is continually improving and I'd anticipate that, in time, this will be ported to become an SVG overlay to Leaflet.
 
-Licence and credits
--------------------
+### Licence and credits
 
 WTFPL.
 
